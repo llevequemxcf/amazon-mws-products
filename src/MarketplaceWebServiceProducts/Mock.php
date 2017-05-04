@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2017 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,8 +13,8 @@
  * @category Amazon
  * @package  Marketplace Web Service Products
  * @version  2011-10-01
- * Library Version: 2015-09-01
- * Generated: Thu Sep 10 06:52:22 PDT 2015
+ * Library Version: 2017-03-22
+ * Generated: Wed Mar 22 23:24:40 UTC 2017
  */
 
 /**
@@ -160,6 +160,24 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
     {
         require_once (dirname(__FILE__) . '/Model/GetMatchingProductForIdResponse.php');
         return MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResponse::fromXML($this->_invoke('GetMatchingProductForId'));
+    }
+
+    /**
+     * Get My Fees Estimate
+     * Retrieves the fees estimate for the
+     *         products identified by the given
+     *         ASIN/SKU list.
+     *
+     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMyFeesEstimate request or MarketplaceWebServiceProducts_Model_GetMyFeesEstimate object itself
+     * @see MarketplaceWebServiceProducts_Model_GetMyFeesEstimate
+     * @return MarketplaceWebServiceProducts_Model_GetMyFeesEstimateResponse
+     *
+     * @throws MarketplaceWebServiceProducts_Exception
+     */
+    public function getMyFeesEstimate($request)
+    {
+        require_once (dirname(__FILE__) . '/Model/GetMyFeesEstimateResponse.php');
+        return MarketplaceWebServiceProducts_Model_GetMyFeesEstimateResponse::fromXML($this->_invoke('GetMyFeesEstimate'));
     }
 
     /**
